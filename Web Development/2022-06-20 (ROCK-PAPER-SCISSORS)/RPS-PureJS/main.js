@@ -11,23 +11,31 @@ function computer_Play(comb)//+
 }
 function game_Brain(comb, computerSelection, playerSelection)
 {
-    if(computerSelection == comb[0] && playerSelection == comb[1])
+    if(computerChoice == combinations[0] && playerChoice == combinations[1])
     {
-        return 1;
+        return 1;//Comp Wins
     }
-    else if(computerSelection == comb[0] && playerSelection == comb[2])
+    else if(computerChoice == combinations[0] && playerChoice == combinations[2])
     {
-        return 0;
+        return 0;//Comp Wins
     }
-    else if(computerSelection == comb[1] && playerSelection == comb[0])
+    else if(computerChoice == combinations[1] && playerChoice == combinations[0])
     {
-        return 0;
+        return 0;//Comp Wins
     }
-    else if(computerSelection == comb[2] && playerSelection == comb[0])
+    else if(computerChoice == combinations[1] && playerChoice == combinations[2])
     {
-        return 1;
+        return 1;//Player Wins
     }
-    else if(playerSelection == computerSelection)
+    else if(computerChoice == combinations[2] && playerChoice == combinations[1])
+    {
+        return 0;//Comp Wins
+    }
+    else if(computerChoice == combinations[2] && playerChoice == combinations[0])
+    {
+        return 1;//Player Wins
+    }
+    else if(playerChoice == computerChoice)
     {
         return "Draw!";
     }
